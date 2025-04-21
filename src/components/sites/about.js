@@ -1,11 +1,11 @@
 import Image from "next/image";
 export const About = () => {
   return (
-    <section className="container d-flex align-items-end py-5 position-relative">
+    <section className="container d-flex align-items-end py-5 position-relative bg-danger">
       <div className="col-4 col-lg-12 col-xl-12 position-absolute about-left-background">
         <span className="lg-text fw-bold">ABOUT US</span>
 
-        <div className="d-flex align-items-center about-card">
+        <div className="d-flex align-items-center about-card col-12 col-xl-6 col-lg-6">
           <span>
             At propIQ, we are more than just a real estate agency; we are your
             trusted partner on your journey to finding the perfect property. Our

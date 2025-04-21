@@ -8,7 +8,7 @@ import { SiTiktok, SiInstagram } from "react-icons/si";
 export const Footer = () => {
   return (
     <footer className="d-flex justify-content-center align-items-center gap-4 footer">
-      <div className="col-2">
+      <div className="col-12 col-xl-2 col-lg-2">
         <Link href="/">
           <Image
             src="/images/Logo.png"
@@ -20,13 +20,13 @@ export const Footer = () => {
         </Link>
       </div>
 
-      <div className="col-2 d-flex justify-content-center align-items-center gap-2">
+      <div className="col-12 col-xl-2 col-lg-2 d-flex justify-content-center align-items-center gap-2">
         <AiOutlineCopyrightCircle />
 
         <span>2025. All rights reserved.</span>
       </div>
 
-      <div className="col-2 d-flex justify-content-center gap-4">
+      <div className="col-12 col-xl-2 col-lg-2 d-flex justify-content-center gap-4">
         <SiTiktok />
 
         <SiInstagram />
