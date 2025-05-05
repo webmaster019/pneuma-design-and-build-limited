@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { connectDB } from '@/lib/db';
 import cloudinary from '@/lib/cloudinary';
 import Project from '@/models/project';
+import { verifyToken } from '@/lib/jwt';
 
 /**
  * @swagger
@@ -44,15 +45,30 @@ import Project from '@/models/project';
  *     responses:
  *       201:
  *         description: Project created successfully
+ *       401:
+ *         description: Unauthorized
  */
+
 export async function GET() {
     await connectDB();
     const projects = await Project.find().sort({ createdAt: -1 });
     return NextResponse.json(projects);
 }
 
-
 export async function POST(req) {
+    const authHeader = req.headers.get('authorization');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const token = authHeader.split(' ')[1];
+    let user;
+    try {
+        user = verifyToken(token);
+    } catch (err) {
+        return NextResponse.json({ error: 'Invalid or expired token' }, { status: 401 });
+    }
+
     const formData = await req.formData();
     const title = formData.get('title');
     const description = formData.get('description');
@@ -73,6 +89,7 @@ export async function POST(req) {
         description,
         mainImage: result.secure_url,
         otherImages: [],
+        createdBy: user.id, // facultatif si tu veux lier à un utilisateur
     });
 
     return NextResponse.json(project, { status: 201 });
