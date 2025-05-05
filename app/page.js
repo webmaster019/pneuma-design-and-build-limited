@@ -1,22 +1,17 @@
 import Layout from "@/components/layout/Layout"
-import ServiceFrom from "@/components/sections/home1/ServiceFrom"
-import Quality from "@/components/sections/home1/Quality"
-import About from "@/components/sections/home1/About"
-import Banner from "@/components/sections/home1/Banner"
-import Services from "@/components/sections/home1/Services"
-import Blog from "@/components/sections/home1/Blog"
-import Funfacts from "@/components/sections/home1/Funfacts"
-import Roofer from "@/components/sections/home1/Roofer"
-import Portfolio from "@/components/sections/home1/Portfolio"
-import Team from "@/components/sections/home1/Team"
-import News from "@/components/sections/home1/News"
-import Brand from "@/components/sections/home1/Brand"
-import Testimonial from "@/components/sections/home1/Testimonial"
-import Workprocess from "@/components/sections/home1/Workprocess"
+;
+import Banner from "@/components/sections/home4/Banner";
+import Services from "@/components/sections/home4/Services";
+import About from "@/components/sections/home4/About";
 import ServiceFour from "@/components/sections/home4/ServiceFour";
 import Choose from "@/components/sections/home4/Choose";
+import Testimonial from "@/components/sections/home4/Testimonial";
 import Faq from "@/components/sections/home4/Faq";
+import Team from "@/components/sections/home4/Team";
+import Brand from "@/components/sections/home4/Brand";
 import Funfact from "@/components/sections/home4/Funfact";
+import Blog from "@/components/sections/home4/Blog";
+import News from "@/components/sections/home4/News";
 export default function Home() {
 
     return (
