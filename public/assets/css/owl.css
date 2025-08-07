@@ -252,5 +252,5 @@
   border-radius: 50%;
 }
 .owl-theme .owl-dots .owl-dot.active span {
-  background: var(--theme-color);
+  background: var(--primary-sage);
 }

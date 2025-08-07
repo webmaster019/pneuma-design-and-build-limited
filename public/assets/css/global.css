@@ -1,5 +1,5 @@
 
-/*** 
+/***
 
 ====================================================================
 	Global Settings
@@ -15,7 +15,7 @@
 }
 
 
-/*** 
+/***
 
 ====================================================================
   Global Settings
@@ -27,11 +27,11 @@
 body {
   font-size:16px;
   position: relative;
-  color:var(--base-color);
+  color:var(--primary-cream);
   line-height:19px;
   font-weight:400;
   background:var(--white-color);
-  font-family: var(--inter);
+  font-family: "Roboto", sans-serif;
   margin: 0 auto;
   background-size:cover;
   background-repeat:no-repeat;
@@ -57,7 +57,7 @@ body {
 
 
 a{
-  color: var(--primary-color);
+  color: var(--primary-blue);
   text-decoration:none;
   transition:all 500ms ease;
   -moz-transition:all 500ms ease;
@@ -67,7 +67,7 @@ a{
 }
 
 a:hover{
-  color: var(--theme-color) !important;
+  color: var(--primary-sage) !important;
   text-decoration:none;
   outline:none;
 }
@@ -80,7 +80,7 @@ input,button,select,textarea{
 ul,li{
   list-style:none;
   padding:0px;
-  margin:0px; 
+  margin:0px;
 }
 
 input{
@@ -97,14 +97,20 @@ textarea:focus{
 
 p{
   position: relative;
-  font-family: var(--inter);
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 29px;
-  color: var(--base-color);
+  color: var(--primary-cream);
   margin-bottom: 0px;
   transition: all 500ms ease;
+}
+.text-primary-cream{
+  color: var(--primary-cream) !important;
+}
+.text-primary-blue{
+  color: var(--primary-blue) !important;
 }
 
 .ml-mr{
@@ -116,7 +122,7 @@ h1,h2,h3,h4,h5,h6{
   position:relative;
   font-family: var(--roboto);
   font-style: normal;
-  color: var(--primary-color);
+  color: var(--primary-blue);
   margin-bottom: 0px;
   transition: all 500ms ease;
 }
@@ -154,14 +160,14 @@ h6{
   line-height: 28px;
 }
 .sub__title h6 {
-  font-family: var(--inter);
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--theme-color);
+  color: var(--primary-sage);
 }
 .title.text-center .main__title h2 {
   padding: 20px 0px 50px;
@@ -170,7 +176,7 @@ h6{
   padding: 20px 0px 30px;
 }
 span {
-  color: var(--theme-color);
+  color: var(--primary-sage);
 }
 
 
@@ -257,7 +263,7 @@ span {
   position: fixed;
   z-index: 99999999;
   font-size: 18px;
-  background: var(--primary-color);
+  background: var(--primary-blue);
   width: 30px;
   height: 30px;
   line-height: 26px;
@@ -424,7 +430,7 @@ span {
   right: 30px;
   width: 40px;
   height: 40px;
-  background: var(--theme-color);
+  background: var(--primary-sage);
   color: var(--white-color);
   align-items: center;
   justify-content: center;
@@ -473,7 +479,7 @@ span {
   box-shadow:none;
 }
 .accordion-box .block .content li span {
-  color: var(--higer-secondary-color);
+  color: var(--primary-tan);
 }
 /* accordion end */
 
@@ -488,7 +494,7 @@ span {
   -o-transition: all 900ms ease;
 }
 .tabs-box .tab.active-tab{
-  display:block;  
+  display:block;
 }
 .tabs-box .tab{
   transform:scale(0.9,0.9) translateY(0px);
@@ -509,7 +515,7 @@ span {
     width: 7em;
   }
   .handle-preloader .animation-preloader .txt-loading .letters-loading {
-    font-size: 40px; 
+    font-size: 40px;
     letter-spacing: 10px;
   }
 }
@@ -557,13 +563,13 @@ img {
 /** theme-btn **/
 
 .btn-one {
-  background-color: var(--theme-color);
+  background-color: var(--primary-sage);
   color: var(--white-color);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 30px;
-  font-family: var(--inter);
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -584,14 +590,14 @@ img {
   transition: all 500ms ease;
 }
 .btn-one.two:hover span{
-  color: var(--primary-color);
+  color: var(--primary-blue);
 }
 
 .btn-one i:after{
-  background-color: var(--theme-color);
+  background-color: var(--primary-sage);
 }
 .btn-one i:before{
-  background-color: var(--primary-color);
+  background-color: var(--primary-blue);
 }
 .btn-one.two i:before{
   background-color: var(--white-color);
@@ -611,7 +617,7 @@ img {
   position: absolute;
   width: 102%;
   height: 200%;
-  background-color: var(--primary-color);
+  background-color: var(--primary-blue);
   left: 0;
   top: 6em;
   transition: all 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
@@ -630,7 +636,7 @@ img {
   padding: 21px 25px;
   background: var(--white-color);
   cursor: pointer;
-  color: var(--primary-color);
+  color: var(--primary-blue);
   text-transform: uppercase;
   font-weight: 600;
   position: relative;
@@ -648,7 +654,7 @@ img {
 .btn-two:before {
   position: absolute;
   content: '';
-  background: var(--primary-color);
+  background: var(--primary-blue);
   width: 0%;
   height: 100%;
   top: 0px;
@@ -690,7 +696,7 @@ img {
 }
 .carousel-btn-one .owl-nav .owl-next span,
 .carousel-btn-one .owl-nav .owl-prev span{
-  color: var(--secondary-color);
+  color: var(--primary-sage);
   transition: all 500ms ease;
 }
 .carousel-btn-one .owl-nav .owl-next:hover span,
@@ -699,7 +705,7 @@ img {
 }
 .carousel-btn-one .owl-nav .owl-next:hover,
 .carousel-btn-one .owl-nav .owl-prev:hover {
-  background: var(--secondary-color);
+  background: var(--primary-sage);
 }
 
 .carousel-btn-two .owl-dots {
@@ -766,23 +772,23 @@ img {
 .pagination li a{
   position: relative;
   display: inline-block;
-  font-family: var(--inter);
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 29px;
-  color: var(--theme-color);
+  color: var(--primary-sage);
   background: transparent;
   z-index: 1;
   transition: all 500ms ease;
-  border: 1px solid var(--theme-color);
+  border: 1px solid var(--primary-sage);
   padding: 10px 20px;
 }
 
 .pagination li a:hover,
 .pagination li a.active{
   color: var(--white-color) !important;
-  background: var(--theme-color);
+  background: var(--primary-sage);
 }
 
 .sec-pad{
@@ -836,8 +842,8 @@ img {
   animation-delay: .9s;
   content: "";
   position: absolute;
-  -webkit-box-shadow: 0 0 0 0 var(--theme-color);
-  box-shadow: 0 0 0 0 var(--theme-color);
+  -webkit-box-shadow: 0 0 0 0 var(--primary-sage);
+  box-shadow: 0 0 0 0 var(--primary-sage);
   -webkit-animation: ripple 3s infinite;
   animation: ripple 3s infinite;
   -webkit-transition: all .4s ease;
@@ -848,7 +854,7 @@ img {
   animation-delay: .6s;
 }
 .scroll-top:hover{
-  background: var(--primary-color);
+  background: var(--primary-blue);
   transform: rotate(270deg);
 }
 a:hover span {
@@ -1056,7 +1062,7 @@ a:hover span {
   border-radius: 3px;
 }
  .check-box input:checked + label:after {
-  background: var(--secondary-color);
+  background: var(--primary-sage);
 }
 .check-box label:after {
   position: absolute;
@@ -1222,13 +1228,13 @@ a:hover span {
 }
 .ml-0{
   margin-left: 0px !important;
-} 
+}
 .mr-0{
   margin-right: 0px !important;
-} 
+}
 .mb-0{
   margin-bottom: 0px !important;
-} 
+}
 .ml-5 {
 	margin-left: 5px !important;
 }

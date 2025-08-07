@@ -8,7 +8,7 @@ export default function Servicefrom() {
             <div className="auto_container">
             <div className="from__one">
                 <div className="from__left">
-                <h3>Request For A Service</h3>
+                <h3>Request For A Services</h3>
                 </div>
                 <div className="from__content">
                 <form method="post" action="sendemail.php" id="contact-form">

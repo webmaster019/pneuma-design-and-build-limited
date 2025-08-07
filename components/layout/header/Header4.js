@@ -1,33 +1,36 @@
-import Link from "next/link"
-import Menu from "../Menu"
-import MobileMenu from "../MobileMenu"
-export default function Header4({ scroll, isMobileMenu, handleMobileMenu, isSidebar, handlePopup, handleSidebar }) {
-    return (
-
-      <>
+import Link from "next/link";
+import Menu from "../Menu";
+import MobileMenu from "../MobileMenu";
+export default function Header4({
+  scroll,
+  isMobileMenu,
+  handleMobileMenu,
+  isSidebar,
+  handlePopup,
+  handleSidebar,
+}) {
+  return (
+    <>
       {/* main header */}
-      <header className={`main-header style-four ${scroll ? "fixed-header" : ""}`}>
+      <header
+        className={`main-header style-four ${scroll ? "fixed-header" : ""}`}
+      >
         {/* header-lower */}
         <div className="header-lower">
-          <div className="outer-box">
-            <div className="header__four__left">
-              <div
-                className="logo-box"
-              >
-                <figure
+          <div className="container">
+            <div className="header__four__left col-12">
+              <div className="logo-box">
+                <div
                   className="logo"
-                  style={{
-                    backgroundImage: "url(assets/images/shape/shape-02.png)"
-                  }}
                 >
                   <Link href="/">
                     <img src="assets/images/logo.png" alt="" />
                   </Link>
-                </figure>
+                </div>
               </div>
               <div className="menu-area">
                 {/*Mobile Navigation Toggler*/}
-                <div className="mobile-nav-toggler"  onClick={handleMobileMenu}>
+                <div className="mobile-nav-toggler" onClick={handleMobileMenu}>
                   <i className="icon-bar" />
                   <i className="icon-bar" />
                   <i className="icon-bar" />
@@ -37,7 +40,7 @@ export default function Header4({ scroll, isMobileMenu, handleMobileMenu, isSide
                     className="collapse navbar-collapse show clearfix"
                     id="navbarSupportedContent"
                   >
-                  <Menu />
+                    <Menu />
                   </div>
                 </nav>
               </div>
@@ -45,7 +48,9 @@ export default function Header4({ scroll, isMobileMenu, handleMobileMenu, isSide
           </div>
         </div>
         {/*sticky Header*/}
-        <div className={`sticky-header ${scroll ? "animated slideInDown" : ""}`}>
+        <div
+          className={`sticky-header ${scroll ? "animated slideInDown" : ""}`}
+        >
           <div className="auto_container">
             <div className="outer-box">
               <div className="logo-box">
@@ -64,9 +69,13 @@ export default function Header4({ scroll, isMobileMenu, handleMobileMenu, isSide
             </div>
           </div>
         </div>
-        <MobileMenu handleMobileMenu={handleMobileMenu} isSidebar={isSidebar} handleSidebar={handleSidebar} />
+        <MobileMenu
+          handleMobileMenu={handleMobileMenu}
+          isSidebar={isSidebar}
+          handleSidebar={handleSidebar}
+        />
       </header>
       {/* main-header end */}
     </>
-    )
+  );
 }
